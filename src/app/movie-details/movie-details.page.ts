@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-movie-details',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieDetailsPage implements OnInit {
 
-  constructor() { }
+  constructor(http: HttpClient, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  getUrl(web:string){
+
   }
+  ngOnInit() {
+    const id = this.route.snapshot.paramMap.get('id');
+    console.log("id")
+  }
+  getDetails() {
 
+  }
 }

@@ -3,12 +3,14 @@ export class Movie {
   fechaLanzamiento:string;
   imagen:string;
   media:number;
+  id:string;
 
-  constructor(nombre:string, fecha:string, imagen:string, media:number) {
+  constructor(nombre:string, fecha:string, imagen:string, media:number, id:string) {
     this.nombre = nombre;
     this.fechaLanzamiento = fecha;
     this.imagen = imagen;
     this.media = media;
+    this.id = id;
 
   }
 }
