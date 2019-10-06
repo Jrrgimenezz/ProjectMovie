@@ -20,8 +20,8 @@ export class HomePage {
     return e;
   }
 
-  mensajeRecibido(e) {
-  console.log(e);
+  mensajeRecibido(e) {                            //Función que se ejecuta al recibir evento de Click en buscar
+  console.log(e);                                 //Hace las llamadas GET y llama a la funcion parseData
   this.listaPeliculas = [];
   this.http.get(this.getUrl(e, 1)).subscribe((data:any) => { console.log(data)
     this.parseData(data);
@@ -32,13 +32,10 @@ export class HomePage {
     }
   })
 }
-parseData(data:any){
+parseData(data:any){                                 //Parsea los datos a tipo Movie
     for(var i = 0; i < data.results.length; i++) {
       var pelicula = data.results[i];
       this.listaPeliculas.push(new Movie(pelicula.title, pelicula.id))
     }
-    console.log(this.listaPeliculas);
-
   }
-
 }

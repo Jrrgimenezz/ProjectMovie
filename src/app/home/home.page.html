@@ -1,11 +1,11 @@
 <ion-header translucent>
-    <ion-toolbar class="ion-text-center">
+    <ion-toolbar class="ion-text-center" color="primary">
       <ion-title> BuscaPelis </ion-title>
-      <app-search-form (FormDataEvent) ="mensajeRecibido($event)"> </app-search-form>
+      <app-search-form (FormDataEvent) ="mensajeRecibido($event)" style="color:black"> </app-search-form>
     </ion-toolbar>
 </ion-header>
 <ion-content fullscreen>
-  <ion-list>
-    <ion-item *ngFor = "let pelicula of listaPeliculas" class="item"> <a routerLink="/movie-details/{{pelicula.id}}">{{pelicula.nombre}}</a></ion-item>
+  <ion-list class = "lista" lines="none">
+    <ion-item *ngFor = "let pelicula of listaPeliculas" > <a routerLink="/movie-details/{{pelicula.id}}">{{pelicula.nombre}}</a></ion-item>
   </ion-list>
 </ion-content>
