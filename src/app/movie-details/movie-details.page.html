@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>movieDetails</ion-title>
+  <ion-toolbar style="display:inline-block">
+    <ion-title>{{pelicula.nombre}}</ion-title>
+    <ion-button (click)= "getBack()">Volver</ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-row class= "ion-justify-content-center ion-align-content-center" style="margin-bottom:3px; margin-top:3px">
+      <img src="{{pelicula.imagen}}">
+  </ion-row>
+  <ion-row class= "ion-justify-content-center ion-align-content-center">
+      <div class="box">
+        <h1>Overview</h1>
+        <p>{{pelicula.resumen}}</p>
+      </div>
+  </ion-row>
+  <ion-row class= "ion-justify-content-center ion-align-content-center">
+    <ion-col>
+      <div class ="box h10">
+        <h3>Release Date</h3>
+        <p>{{pelicula.fechaLanzamiento}}</p>
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class ="box h10">
+        <h3>Vote Average</h3>
+        <p>{{pelicula.media}}</p>
+      </div>
+    </ion-col>
+  </ion-row>
 </ion-content>

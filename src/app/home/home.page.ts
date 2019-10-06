@@ -35,7 +35,7 @@ export class HomePage {
 parseData(data:any){
     for(var i = 0; i < data.results.length; i++) {
       var pelicula = data.results[i];
-      this.listaPeliculas.push(new Movie(pelicula.title, pelicula.release_date, pelicula.poster_path, pelicula.vote_average, pelicula.id))
+      this.listaPeliculas.push(new Movie(pelicula.title, pelicula.id))
     }
     console.log(this.listaPeliculas);
 
